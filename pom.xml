@@ -127,6 +127,7 @@
 
         <!-- Logstash Json Encoder -->
         <jackson.version>2.22.0</jackson.version>
+        <jackson-uuid.version>5.2.0</jackson-uuid.version>
         <logstash.version>7.4</logstash.version>
 
         <!-- Automatic Module Name -->
@@ -219,6 +220,12 @@
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.uuid</groupId>
+            <artifactId>java-uuid-generator</artifactId>
+            <version>${jackson-uuid.version}</version>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
@@ -274,6 +281,7 @@
                                     <include>com.fasterxml.jackson.core:jackson-annotations</include>
                                     <include>com.fasterxml.jackson.core:jackson-core</include>
                                     <include>com.fasterxml.jackson.core:jackson-databind</include>
+                                    <include>com.fasterxml.uuid:java-uuid-generator</include>
                                     <include>net.logstash.logback:logstash-logback-encoder</include>
                                 </includes>
                             </artifactSet>
